@@ -13,7 +13,7 @@ if(isset($staff_name) && isset($staff_sname)){
     session_start();
     $_SESSION['staff_name']=$staff_name;
     $_SESSION['staff_sname']=$staff_sname;
-    header("Location:edit.php");
+    header("Location:main.php");
 }else{
     header("Location:index.php");
 }

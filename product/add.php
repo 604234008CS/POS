@@ -13,6 +13,7 @@ if (isset($_POST['product_id']) && isset($_POST['product_name']) && isset($_POST
     $statement = $connection->prepare($sql);
     if($statement->execute())   {
         $message = 'เพิ่มสินค้าสำเร็จ';
+        header("Location: ../product/show.php");
     }
 }
 ?>
@@ -33,21 +34,27 @@ if (isset($_POST['product_id']) && isset($_POST['product_name']) && isset($_POST
     <?php endif; ?>
 
       <form method="post">        
-        <div class="form-group">  
+        <div class="form-group">
+          <label for="">รหัสสินค้า</label>
           <input type="text" name="product_id" id="product_id" class="form-control" placeholder = 'รหัสสินค้า' pattern = "[0-9]{5}" title = "กรุณากรอกรหัส 5 หลัก" required ></div>
         <div class="form-group">
+          <label for="">ชื่อสินค้า</label>
           <input type="text" name="product_name" id="product_name" class="form-control" placeholder = 'ชื่อสินค้า' required ></div>
         <div class="form-group"> 
+            <label for="">ประเภทสินค้า</label>
             <select name="product_type_id" id="product_type_id" class="form-control" placeholder = 'ประเภทสินค้า' required >
                 <option value="">ประเภทสินค้า</option>
                 <option value="1">เครื่องดื่ม</option>
                 <option value="2">ของใช้</option>
             </select></div>
         <div class="form-group">
+          <label for="">ราคา</label>
           <input type="text" name="price" id="price" class="form-control" placeholder = 'ราคา THB' required ></div>   
         <div class="form-group">
+          <label for="">วันผลิต</label>
           <input type="date" name="product_MFD" id="product_MFD" class="form-control" placeholder = 'วันผลิต' required ></div>
         <div class="form-group">
+          <label for="">วันหมดอายุ</label>
           <input type="date" name="product_EXP" id="product_EXP" class="form-control" placeholder = 'วันหมดอายุ' required ></div>
         <div class="form-group">
            <button type="submit" class="btn btn-info">เพิ่มสินค้า</button></div>

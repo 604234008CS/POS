@@ -37,9 +37,9 @@ $product = $statement->fetchAll(PDO::FETCH_OBJ);
             <td><?= $products->product_MFD; ?></td> 
             <td><?= $products->product_EXP; ?></td>   
             <td>
-              <a href="edit.php?id=<?= $products->email ?>" class="btn btn-info">Edit</a>
+              <a href="edit.php?id=<?= $products->product_id ?>" class="btn btn-info">แก้ไข</a>
               <a onclick="return confirm('ต้องการลบหรือไม่?')" 
-              href="delete.php?id=<?= $products->email ?>" class='btn btn-danger'>Delete</a>
+              href="delete.php?id=<?= $products->product_id ?>" class='btn btn-danger'>ลบ</a>
             </td>
           </tr>
         <?php endforeach; ?>
