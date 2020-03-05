@@ -35,7 +35,7 @@ if (isset($_POST['customer_id']) && isset($_POST['customer_name']) && isset($_PO
       <form method="post">        
         <div class="form-group">
           <label for="">รหัสลูกค้า</label>
-          <input type="text" name="customer_id" id="customer_id" class="form-control" placeholder = 'รหัสลูกค้า' pattern = "c[0-9]{4}" title = "กรุณากรอกตัวอักษร s และตัวเลข 3 หลัก" required ></div>
+          <input type="text" name="customer_id" id="customer_id" class="form-control" placeholder = 'รหัสลูกค้า' pattern = "c[0-9]{4}" title = "กรุณากรอกตัวอักษร c และตัวเลข 4 หลัก" required ></div>
         <div class="form-group">
           <label for="">ชื่อ</label>
           <input type="text" name="customer_name" id="customer_name" class="form-control" placeholder = 'ชื่อ' required ></div>

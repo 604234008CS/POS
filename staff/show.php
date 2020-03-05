@@ -1,6 +1,6 @@
 <?php
 require '../db.php';
-$sql = 'SELECT * FROM staff';
+$sql = 'SELECT staff.staff_id, staff.staff_name, staff.staff_sname, staff_type.staff_type_name, staff.address, staff.phoneNumber FROM staff, staff_type WHERE staff.staff_type_id = staff_type.staff_type_id';
 $statement = $connection->prepare($sql);
 $statement->execute();
 $staff = $statement->fetchAll(PDO::FETCH_OBJ);
@@ -33,7 +33,7 @@ $staff = $statement->fetchAll(PDO::FETCH_OBJ);
             <td><?= $staffs->staff_id; ?></td> 
             <td><?= $staffs->staff_name; ?></td> 
             <td><?= $staffs->staff_sname; ?></td> 
-            <td><?= $staffs->staff_type_id; ?></td> 
+            <td><?= $staffs->staff_type_name; ?></td> 
             <td><?= $staffs->address; ?></td> 
             <td><?= $staffs->phoneNumber; ?></td>   
             <td>

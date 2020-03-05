@@ -36,7 +36,7 @@ if (isset($_POST['product_id']) && isset($_POST['product_name']) && isset($_POST
       <form method="post">        
         <div class="form-group">
           <label for="">รหัสสินค้า</label>
-          <input type="text" name="product_id" id="product_id" class="form-control" placeholder = 'รหัสสินค้า' pattern = "[0-9]{5}" title = "กรุณากรอกรหัส 5 หลัก" required ></div>
+          <input type="text" name="product_id" id="product_id" class="form-control" placeholder = 'รหัสสินค้า' pattern = "p[0-9]{4}" title = "กรุณากรอกตัวอักษร c และตัวเลข 4 หลัก" required ></div>
         <div class="form-group">
           <label for="">ชื่อสินค้า</label>
           <input type="text" name="product_name" id="product_name" class="form-control" placeholder = 'ชื่อสินค้า' required ></div>

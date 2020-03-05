@@ -1,6 +1,8 @@
 <?php
 require '../db.php';
-$sql = 'SELECT * FROM product';
+$sql = 'SELECT product.product_id, product.product_name, product_type.product_type_name, product.price, product.product_MFD, product.product_EXP 
+FROM product, product_type 
+WHERE product.product_type_id = product_type.product_type_id';
 $statement = $connection->prepare($sql);
 $statement->execute();
 $product = $statement->fetchAll(PDO::FETCH_OBJ);
@@ -32,7 +34,7 @@ $product = $statement->fetchAll(PDO::FETCH_OBJ);
              <!-- สร้างใชื่อห้เหมือนในฐานข้อมูล -->
             <td><?= $products->product_id; ?></td> 
             <td><?= $products->product_name; ?></td> 
-            <td><?= $products->product_type_id; ?></td> 
+            <td><?= $products->product_type_name; ?></td> 
             <td><?= $products->price; ?></td> 
             <td><?= $products->product_MFD; ?></td> 
             <td><?= $products->product_EXP; ?></td>   
