@@ -1,8 +1,8 @@
 <?php
 require '../db.php';
-$sql = 'SELECT product.product_id, product.product_name, product_type.product_type_name, product.price, product.product_MFD, product.product_EXP 
-FROM product, product_type 
-WHERE product.product_type_id = product_type.product_type_id';
+$sql = 'SELECT product.product_id, product.product_name, product_type.product_type_name, product.price, product.product_MFD, product.product_EXP
+FROM product
+INNER JOIN product_type ON product.product_type_id = product_type.product_type_id';
 $statement = $connection->prepare($sql);
 $statement->execute();
 $product = $statement->fetchAll(PDO::FETCH_OBJ);
