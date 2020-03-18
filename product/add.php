@@ -46,6 +46,8 @@ if (isset($_POST['product_id']) && isset($_POST['product_name']) && isset($_POST
                 <option value="">ประเภทสินค้า</option>
                 <option value="1">เครื่องดื่ม</option>
                 <option value="2">ของใช้</option>
+                <option value="3">ขนมขบเคี้ยว</option>
+                <option value="4">อาหารแห้ง</option>
             </select></div>
         <div class="form-group">
           <label for="">ราคา</label>

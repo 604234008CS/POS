@@ -61,6 +61,7 @@ if (isset($_POST['password']) && isset($_POST['staff_name']) && isset($_POST['st
                 <option value="">ประเภทพนักงาน</option>
                 <option value="1">ผู้จัดการ</option>
                 <option value="2">พนักงานทั่วไป</option>
+                <option value="3">แม่บ้าน</option>
             </select></div>
         <div class="form-group">
           <label for="">ที่อยู่</label>

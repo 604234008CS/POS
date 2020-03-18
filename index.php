@@ -15,9 +15,9 @@
 
     <form action="login.php" method="post">        
         <div class="form-group">  
-          <input type="username" name="username" id="username" class="form-control" placeholder = 'บัญชีผู้ใช้'></div>
+          <input type="username" name="username" id="username" class="form-control" placeholder = 'บัญชีผู้ใช้' required></div>
         <div class="form-group">
-          <input type="password" name="password" id="password" class="form-control" placeholder = 'รหัสผ่าน'></div>  
+          <input type="password" name="password" id="password" class="form-control" placeholder = 'รหัสผ่าน' required></div>  
         <div class="form-group">
            <button type="submit" class="btn btn-info">เข้าสู่ระบบ</button></div>
       </form>

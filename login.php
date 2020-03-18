@@ -17,4 +17,5 @@ if(isset($staff_name) && isset($staff_sname)){
 }else{
     header("Location:index.php");
 }
+
 ?>
